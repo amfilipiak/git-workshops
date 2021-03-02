@@ -41,8 +41,7 @@ def random_word():
     with open("res/words.txt",mode="rt") as f:
         line = next(f)
         for num, aline in enumerate(f, 2):
-            if random.randrange(num):
-                continue
-            line = aline
+            if not random.randrange(num):
+                line = aline
             print(line)
         return line.strip()
