@@ -44,4 +44,5 @@ def random_word():
             if random.randrange(num):
                 continue
             line = aline
+            print(line)
         return line.strip()
