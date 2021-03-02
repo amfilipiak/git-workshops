@@ -38,7 +38,7 @@ def add_noise(word, n_changes=1):
 
 
 def random_word():
-    with open("reas/words.txt",mode="rt") as f:
+    with open("res/words.txt",mode="rt") as f:
         line = next(f)
         for num, aline in enumerate(f, 2):
             if random.randrange(num):
