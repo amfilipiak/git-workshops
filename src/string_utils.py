@@ -1,5 +1,11 @@
 import random
-from string import ascii_lowercase
+from string import ascii_lowercase,punctuation,digits
+
+
+_chars = ascii_lowercase+punctuation+digits
+
+def random_car():
+    return random.choice(_chars)
 
 
 def random_alpha():
