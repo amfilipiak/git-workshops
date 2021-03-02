@@ -37,3 +37,11 @@ def add_noise(word, n_changes=1):
     return "".join(noisy)
 
 
+def random_word():
+    with open("reas/words.txt",mode="rt") as f:
+        line = next(f)
+        for num, aline in enumerate(f, 2):
+            if random.randrange(num):
+                continue
+            line = aline
+        return line.strip()
