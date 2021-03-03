@@ -6,6 +6,13 @@ class StringUtils(object):
 
     _chars = ascii_lowercase+punctuation+digits
 
+    #TODO
+    def random_word(self):
+        return
+
+    def random_sentence(self, length=5):
+        return " ".join(self.random_word() for _ in range(length))
+
     @staticmethod
     def random_char():
         return random.choice(StringUtils._chars)
