@@ -6,6 +6,16 @@ class StringUtils(object):
 
     _chars = ascii_lowercase+punctuation+digits
 
+    def __init__(self):
+        self.words = list(self._load_words())
+
+    def _load_words(self):
+        words = set()
+        with open("res/words.txt") as f:
+            for line in f:
+                words.add(line.strip().lower())
+        return words
+
     @staticmethod
     def random_char():
         return random.choice(StringUtils._chars)
