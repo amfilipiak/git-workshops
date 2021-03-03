@@ -16,6 +16,9 @@ class StringUtils(object):
                 words.add(line.strip().lower())
         return words
 
+    def random_word(self):
+        return random.choice(self.words)
+
     @staticmethod
     def random_char():
         return random.choice(StringUtils._chars)
