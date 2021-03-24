@@ -12,6 +12,12 @@ class StringUtils(object):
     def random_sentence(self, max_word_length, length=5):
         return " ".join(self.random_word(max_word_length) for _ in range(length))
 
+    def random_word_replace(self, sentence, max_word_length):
+        parts = sentence.split()
+        to_replace = random.randint(0,len(parts)-1)
+        parts[to_replace] = self.random_word(max_word_length)
+        return " ".join(parts)
+
     @staticmethod
     def random_char():
         return random.choice(StringUtils._chars)
